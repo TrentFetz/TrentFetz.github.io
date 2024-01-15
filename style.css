@@ -86,7 +86,8 @@ li a:hover{
     padding: 1rem 15rem;
 }
 
-.projects{
+.projects
+{
     padding: 2rem;
     border-radius: .375rem;
     background-color: #fff;
@@ -96,4 +97,43 @@ li a:hover{
     justify-content: space-between;
     gap: 2rem;
     box-shadow: 0 19px 38px rgba(15,23,42,.3),0 15px 12px rgba(15,23,42,.22);
+    flex-wrap: wrap;
+}
+
+.project1{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.github-project-link1 img
+{
+    flex-grow: 1;
+    width: 4rem;
+    height: auto;
+    margin-right: 1rem;
+}
+.project_header
+{
+    padding-top: .5rem;
+    flex-grow: 2;
+    font-size: 2rem;
+}
+.text
+{
+    padding-top: 1rem;
+    align-self:flex-end;
+}
+
+.project3{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.github-project-link2 img
+{
+    flex-grow: 1;
+    width: 4rem;
+    height: auto;
+    margin-right: 1rem;
+    
 }
