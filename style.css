@@ -1,8 +1,13 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
 *{
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
 }
 .container{
     width: 100%;
@@ -62,9 +67,9 @@ li a:hover{
     margin-left: auto;
     margin-top: 100px;
     padding: 50px;
-    border: 1px solid #000 ;
     background-color: #FFF;
     border-radius: .375rem;
+    box-shadow: 0 19px 38px rgba(15,23,42,.3),0 15px 12px rgba(15,23,42,.22);
 
 }
 .content h1{
@@ -73,6 +78,15 @@ li a:hover{
     line-height: 85px;
 }
 /*This is the start of the projects portion of the page.*/
+
+.myProjectsHeader
+{
+    text-align: center;
+    padding: 4rem;
+    font-size: 70px;
+}
+
+
 .projects_container
 {
     display: flex;
@@ -93,29 +107,24 @@ li a:hover{
     background-color: #fff;
     color: #000;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     gap: 2rem;
     box-shadow: 0 19px 38px rgba(15,23,42,.3),0 15px 12px rgba(15,23,42,.22);
-    flex-wrap: wrap;
 }
 
-.project1{
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .github-project-link1 img
 {
-    flex-grow: 1;
+    float: right;
+    
     width: 4rem;
     height: auto;
     margin-right: 1rem;
+    margin-top: 1rem;
+    justify-content: right;
 }
 .project_header
 {
     padding-top: .5rem;
-    flex-grow: 2;
     font-size: 2rem;
 }
 .text
@@ -124,16 +133,25 @@ li a:hover{
     align-self:flex-end;
 }
 
-.project3{
-    display: flex;
-    flex-wrap: nowrap;
+
+/* This is code for the contact me portion of the site*/
+.contactMeHeader{
+    text-align: center;
+    padding: 4rem;
+    font-size: 70px;
 }
 
-.github-project-link2 img
+.contactMe
 {
-    flex-grow: 1;
-    width: 4rem;
-    height: auto;
-    margin-right: 1rem;
-    
+    margin: 12rem;
+    padding: 6rem;
+    border-radius: .375rem;
+    background-color: #fff;
+    color: #000;
+    align-content: center;
+    text-align: center;
+    gap: 2rem;
+    box-shadow: 0 19px 38px rgba(15,23,42,.3),0 15px 12px rgba(15,23,42,.22);
 }
+
+
