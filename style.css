@@ -6,83 +6,83 @@
 }
 .container{
     width: 100%;
-    min-height: 100vh;
-    background-image: linear-gradient(rgba(50, 92, 170, 0.295),rgba(190, 133, 26, 0.562)), url(images/frontcover.png);
+    min-height: 75vh;
     background-size: cover;
     background-position: center;
-    padding: 10px 8%;
-}
-nav{
-    width:100%;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
-}
-.logo{
-    width: 180px;
-    cursor: pointer;
-}
-nav ul{
-    list-style: none;
-    width: 100%;
-    text-align: right;
-    padding-right: 60px;
+    border: 1px solid #000;
+    margin: 1px;
+    background-color: #72bcd4;
 }
 
-nav ul li{
-    display: inline-block;
-    margin: 10px 20px;
+
+/*This is for top navigation bar controller*/
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
 }
-nav ul li a{
-    color: #fff;
+li{
+    float: right;
+}
+
+li a{
+    display: block;
+    color: #FFF;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
 }
 
-.btn1{
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    border: 0;
-    outline: 0;
-    border-radius: 5px;
-    background: rgb(15, 127, 231);
-    color:#fff;
-    font-weight: 500;
-    cursor: pointer;
+
+li a:hover{
+    background-color: #333;
 }
-.btn1 img{
-    width: 20px;
-    margin-right: 10px;
-}
+
+/*This is for main text in middle of page*/
+
 .content{
-    margin-top: 14%;
-    color: #fff;
+    
+    color: #000000;
     max-width: 620px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+    padding: 50px;
+    border: 1px solid #000 ;
+    background-color: #FFF;
+    border-radius: .375rem;
+
 }
 .content h1{
     font-size: 70px;
     font-weight: 600;
     line-height: 85px;
-    margin-bottom: 25px;
-}
-.content form{
-    display: flex;
-    align-items: center;
-    background: #fff;
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 30px;
 }
 
-.content form input{
-    border: 0;
-    outline: 0;
-    width: 100%;
-    font-size: 1;
-    padding-left: 10px;
+.projects_container
+{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: repeat(auto fit, minmax(500px,1fr));
+    grid-gap: 1em;
+    gap: 1em;
 }
-.content form .btn1{
-    font-size: 15px;
-    padding: 10px 30px;
+
+.projects{
+    padding: 2rem;
+    border-radius: .375rem;
+    background-color: #72bcd4;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    box-shadow: 0 19px 38px rgba(15,23,42,.3),0 15px 12px rgba(15,23,42,.22);;
 }
