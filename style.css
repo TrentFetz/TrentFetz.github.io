@@ -55,6 +55,13 @@ nav .github-link img{
     vertical-align: middle;
 }
 
+nav .linkedIn-link img
+{
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;
+    color: #333;
+}
 
 li a:hover{
     background-color: #333;
@@ -164,11 +171,12 @@ li a:hover{
     padding: 8px;
     display: block;
     border: none;
-    border-bottom: 1px solid #333;
+    border: 1px solid #333;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    border-radius: .375rem;
 }
 
 .animate-input
@@ -179,7 +187,25 @@ li a:hover{
 {
     width: 12rem !important;
 }
+.textfield
+{
+
+    padding: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 100%;
+    border-radius: .375rem;
+}
+
+
 .sendItButton
 {
-    background-color: rgba(9,0,77,0.65);
+    background-color: rgba(104, 36, 143, 0.65);
+    color: #FFF;
+    margin: 1rem;
+    padding: .5rem;
+    border-radius: .375rem;
 }
+
