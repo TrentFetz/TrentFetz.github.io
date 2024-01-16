@@ -10,13 +10,17 @@
     font-family: 'Poppins', sans-serif;
 }
 .container{
+    margin-top: 0;
     width: 100%;
     min-width: 100%;
-    min-height: 75vh;
+    min-height: 90vh;
     background-size: cover;
     background-position: center;
+    background-image: linear-gradient(rgba(9,0,77,0.65),rgba(9,0,77,0.65)), url(images/frontcover.png);
     border: 1px solid #000;
-    background-color: #72bcd4;
+    /*background-color: #72bcd4;*/
+    border-bottom-right-radius: 100% 5%;
+
 }
 
 
@@ -137,13 +141,13 @@ li a:hover{
 /* This is code for the contact me portion of the site*/
 .contactMeHeader{
     text-align: center;
-    padding: 4rem;
+    padding: 2rem;
     font-size: 70px;
 }
 
 .contactMe
 {
-    margin: 12rem;
+    margin: 2rem 12rem;
     padding: 6rem;
     border-radius: .375rem;
     background-color: #fff;
@@ -155,3 +159,27 @@ li a:hover{
 }
 
 
+.input
+{
+    padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #333;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.animate-input
+{
+    transition: width .4s ease-in-out;
+}
+.animate-input:focus
+{
+    width: 12rem !important;
+}
+.sendItButton
+{
+    background-color: rgba(9,0,77,0.65);
+}
