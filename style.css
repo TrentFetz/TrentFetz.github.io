@@ -50,7 +50,18 @@ li a{
     text-decoration: none;
     height: 100%;
     font-size: 1.5rem;
+
 }
+li b{
+    
+    color: #FFF;
+    padding: 14px 16px;
+    text-decoration: none;
+    height: 100%;
+    font-size: 1.5rem;
+}
+
+
 nav .github-link img,
 nav .linkedIn-link img
 {
