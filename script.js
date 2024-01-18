@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         link.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
 
-            if (href.startsWith('#')) {
+            if (href.startsWith('#')) {//seperates section links from external web links
                 e.preventDefault();
 
                 const targetId = href.substring(1);
@@ -21,3 +21,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+document.addEventListener('scroll',reveal);
+
+function reveal(){
+    var reveals = document.querySelectorAll('.reveal');
+
+    for(var i = 0; i < reveals.length; i++)
+    {
+        var windowHeight = window.innerHeight;
+        var revealTop = reveals[i].getBoundingClientRect().top;
+        var revealPoint = 150;
+
+        if(revealTop < windowHeight - revealPoint)
+        {
+            reveals[i].classList.add('active');
+        }
+        else{
+            reveals[i].classList.remove('active');
+        }
+    }
+}
