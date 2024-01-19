@@ -293,12 +293,13 @@ Game stuff
 }
 #character
 {
-    width: 20px;
-    height: 50px;
-    background-color: red;
+    width: 24px;
+    height: 32px;
+    background-image: url('images/penguin-gray.png');
+    background-position: 24px 32px;
     position: absolute;
     top: 150px;
-    transition: left .2s ease-out;
+    animation: moveAnimation 1s steps(4) infinite;
     
 }
 
@@ -321,14 +322,20 @@ Game stuff
     100%{top: 150px;}
 }
 
-@keyframes moveCharRight
+@keyframes moveAnimation
 {
     0%{
-        
+        background-position: 0 0;
+    }
+    30%{
+
+    }
+    70%{
+        background-position: 48 64;
     }
     100%
     {
-        
+        background-position: 48 64;
     }
 }
 

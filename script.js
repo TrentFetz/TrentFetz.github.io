@@ -58,7 +58,11 @@ document.addEventListener('keydown', function(event){
     if(event.key === 'D' || event.key === 'd')
     {
         isMovingRight = true;
-        movePlayer();
+        movePlayer('right');
+    }else if(event.key === 'A' || event.key === 'a')
+    {
+        isMovingLeft = true;
+        movePlayer('left');
     }
 
 });
@@ -66,23 +70,12 @@ document.addEventListener('keyup',(event) => {
     if(event.key ==='d' || event.key ==='D')
     {
         isMovingRight = false;
-    }
-} )
-
-document.addEventListener('keydown', function(event){
-    if(event.key === 'A' || event.key === 'a')
-    {
-        isMovingLeft = true;
-        movePlayer();
-    }
-
-});
-document.addEventListener('keyup',(event) => {
-    if(event.key ==='A' || event.key ==='a')
+    }else if(event.key ==='A' || event.key ==='a')
     {
         isMovingLeft = false;
     }
 } )
+
 
 
 var character = document.getElementById("character");
@@ -99,7 +92,7 @@ function jump(){
 }
 
 
-function movePlayer()
+function movePlayer(direction)
 {
     const curPos = parseInt(getComputedStyle(character).left);
     let newPosition;
@@ -117,6 +110,15 @@ function movePlayer()
     }
     character.style.left = newPosition +'px';
 
-    requestAnimationFrame(movePlayer);
+
+    if(direction === 'right')
+    {
+        character.style.animationDirection = 'normal';
+    } else if (direction === 'left')
+    {
+        character.style.animationDirection = 'reverse';
+    }
+
+    requestAnimationFrame(() => movePlayer(direction));
 }
 
