@@ -280,3 +280,62 @@ scrolls towards that content
         margin: 0%;
     }
 }
+
+
+
+/* 
+Game stuff
+*/
+#game
+{
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+}
+#character
+{
+    width: 24px;
+    height: 32px;
+    background-image: url('images/penguin-gray.png');
+    background-position: 48px 64px;
+    position: absolute;
+    top: 150px;
+}
+
+
+.moving{
+    animation: moveAnimation 1s  infinite!important;
+}
+.animate
+{
+    animation: jump 500ms infinite!important;
+}
+
+
+@keyframes jump
+{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top:100px;}
+    100%{top: 150px;}
+}
+
+@keyframes moveAnimation
+{
+    
+
+    30%
+    {
+        background-position: 48px 96px;
+    }
+    70%
+    {
+        background-position: 24px 96px;
+    }
+    100%
+    {
+        background-position: 48px 96px;
+    }
+}
+
+
