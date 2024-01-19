@@ -74,6 +74,7 @@ document.addEventListener('keyup',(event) => {
     {
         isMovingLeft = false;
     }
+    character.classList.remove("moving");
 } )
 
 
@@ -100,25 +101,37 @@ function movePlayer(direction)
 
     if(isMovingRight)
     {
-        newPosition = curPos + 10;
+        if(character.classList != "moving")
+        {
+            character.classList.add("moving");
+        }
+        newPosition = curPos + 1;
     }
     else if(isMovingLeft)
     {
-        newPosition = curPos - 10;
+        newPosition = curPos - 1;
     } else{
         return;
     }
     character.style.left = newPosition +'px';
 
-
-    if(direction === 'right')
-    {
-        character.style.animationDirection = 'normal';
-    } else if (direction === 'left')
-    {
-        character.style.animationDirection = 'reverse';
-    }
-
+    keepCharIn();
     requestAnimationFrame(() => movePlayer(direction));
 }
 
+function keepCharIn()
+{
+    const gameWidth = 500;
+    const charWidth = 24;
+    const charLeft = parseInt(getComputedStyle(character).left);
+
+    if(charLeft < 0)
+    {
+        character.style.left = '0px';
+    }
+    const maxRight = gameWidth - charWidth;
+    if(charLeft>maxRight)
+    {
+        character.style.left = maxRight +'px';
+    }
+}

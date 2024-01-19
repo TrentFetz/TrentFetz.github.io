@@ -296,21 +296,18 @@ Game stuff
     width: 24px;
     height: 32px;
     background-image: url('images/penguin-gray.png');
-    background-position: 24px 32px;
+    background-position: 48px 64px;
     position: absolute;
     top: 150px;
-    animation: moveAnimation 1s steps(4) infinite;
-    
 }
 
+
+.moving{
+    animation: moveAnimation 1s  infinite!important;
+}
 .animate
 {
-    animation: jump 500ms infinite;
-}
-
-.moveR
-{
-    animation: moveCharRight 7s ease-in-out forwards;
+    animation: jump 500ms infinite!important;
 }
 
 
@@ -324,18 +321,19 @@ Game stuff
 
 @keyframes moveAnimation
 {
-    0%{
-        background-position: 0 0;
-    }
-    30%{
+    
 
+    30%
+    {
+        background-position: 48px 96px;
     }
-    70%{
-        background-position: 48 64;
+    70%
+    {
+        background-position: 24px 96px;
     }
     100%
     {
-        background-position: 48 64;
+        background-position: 48px 96px;
     }
 }
 
