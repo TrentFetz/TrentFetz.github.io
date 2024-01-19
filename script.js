@@ -42,3 +42,81 @@ function reveal(){
         }
     }
 }
+
+
+
+
+//Game code
+let isMovingRight = false;
+let isMovingLeft = false;
+document.addEventListener('click',function()
+{
+    jump();
+});
+
+document.addEventListener('keydown', function(event){
+    if(event.key === 'D' || event.key === 'd')
+    {
+        isMovingRight = true;
+        movePlayer();
+    }
+
+});
+document.addEventListener('keyup',(event) => {
+    if(event.key ==='d' || event.key ==='D')
+    {
+        isMovingRight = false;
+    }
+} )
+
+document.addEventListener('keydown', function(event){
+    if(event.key === 'A' || event.key === 'a')
+    {
+        isMovingLeft = true;
+        movePlayer();
+    }
+
+});
+document.addEventListener('keyup',(event) => {
+    if(event.key ==='A' || event.key ==='a')
+    {
+        isMovingLeft = false;
+    }
+} )
+
+
+var character = document.getElementById("character");
+function jump(){
+    if(character.classList != "animate")
+    {
+        character.classList.add("animate");
+    }
+    
+    setTimeout(function()
+    {
+        character.classList.remove("animate");
+    },500);
+}
+
+
+function movePlayer()
+{
+    const curPos = parseInt(getComputedStyle(character).left);
+    let newPosition;
+    
+
+    if(isMovingRight)
+    {
+        newPosition = curPos + 10;
+    }
+    else if(isMovingLeft)
+    {
+        newPosition = curPos - 10;
+    } else{
+        return;
+    }
+    character.style.left = newPosition +'px';
+
+    requestAnimationFrame(movePlayer);
+}
+
