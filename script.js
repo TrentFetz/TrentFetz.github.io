@@ -41,6 +41,7 @@ function reveal(){
             reveals[i].classList.remove('active');
         }
     }
+
 }
 
 
@@ -135,3 +136,6 @@ function keepCharIn()
         character.style.left = maxRight +'px';
     }
 }
+=======
+}
+
